@@ -2,8 +2,7 @@ data=csvread('V1.csv');
 
 X=data(2:500,1:19);
 
-m=length(X);
-K = 12;
+K = 8;
 max_iters = 40;
 
 centroids = zeros(K,size(X,2)); 
@@ -16,4 +15,4 @@ initial_centroids=centroids;
 [centroids, idx] = runkMeans(X,initial_centroids,max_iters,true);
 fprintf('\nK-Means Done.\n\n');
 
-idx(450:460)
+idx(1:20)

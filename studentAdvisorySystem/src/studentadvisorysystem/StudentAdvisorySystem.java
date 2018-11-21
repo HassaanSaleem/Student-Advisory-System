@@ -16,8 +16,10 @@ public class StudentAdvisorySystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login x=new Login();
-        x.setVisible(true);
+        //Login x=new Login();
+        //x.setVisible(true);
+        Home y=new Home();
+        y.setVisible(true);
     }
     
 }
