@@ -18,8 +18,15 @@ public class StudentAdvisorySystem {
         // TODO code application logic here
         //Login x=new Login();
         //x.setVisible(true);
-        Home y=new Home();
-        y.setVisible(true);
+        
+        //Home y=new Home();
+        //y.setVisible(true);
+        
+        //pageStudent x=new pageStudent();
+        //x.setVisible(true);
+        
+        pageTeacher z=new pageTeacher();
+        z.setVisible(true);
     }
     
 }
