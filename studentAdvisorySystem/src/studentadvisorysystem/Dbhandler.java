@@ -12,15 +12,16 @@ import java.sql.SQLException;
  * @author muaaz
  */
 public class Dbhandler {
-       private Connection con; //connection type variable
+    private Connection con; //connection type variable
     private Statement st;
     public PreparedStatement stt; //for prepared statement used later
     private ResultSet rs;
+    
     public Dbhandler()
     {try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
              st = con.createStatement();
             System.out.println("connected");
              }catch(ClassNotFoundException | SQLException ex){
@@ -72,32 +73,54 @@ public class Dbhandler {
        stt.execute();
        stt.close();
             }
-    public void getdata() throws SQLException
+    public boolean getdata(String a,String e) throws SQLException
         {
             
+                int count=0,count1=0;
                 String query;
+                
                 query = "SELECT * FROM AdvisorySystem.Student";
                 rs=st.executeQuery(query);
                 System.out.println("Records from database:");
-                while(rs.next()){
+                while(rs.next())
+                {
                     String name=rs.getString("name");
                    //’name’ is the attribute of table persons 
                     String email=rs.getString("email");
                    //rs is the result set variable declare in class
                     System.out.println(name);
                     System.out.println(email);
+                   
+                    for(int x=0;x<name.length();x++)
+                    {
+                        if(a.charAt(x)==name.charAt(x))
+                        {
+                            count++;
+                        }
+                    }
                     
-                }       
+                    for(int x=0;x<email.length();x++)
+                    {
+                       
+                        if(e.charAt(x)==email.charAt(x))
+                        {
+                            count1++;  
+                        }
+                    }
+                    
+                    if(count==a.length() && count1>=e.length())
+                    return true;
+                                    
+                }
+                
+                System.out.println(count);
+                System.out.println(count1);
+                if(count==a.length() && count1>e.length())
+                    return true;
+                else
+                    return false;
+                
         }
-        public static void main(String[] args) throws SQLException {
-        // TODO code application logic here
-        Dbhandler connect =new Dbhandler();
-        connect.create_database();
-        connect.create_table();
-        connect.insert_Prepared_Statement();
-        connect.insert_data();
-        connect.getdata();
-    }
-
+       
     
 }

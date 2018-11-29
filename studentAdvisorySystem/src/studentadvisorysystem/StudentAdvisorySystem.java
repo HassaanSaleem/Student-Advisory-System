@@ -5,28 +5,26 @@
  */
 package studentadvisorysystem;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 /**
  *
  * @author salee
  */
 public class StudentAdvisorySystem {
 
+    protected Login log;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        //Login x=new Login();
-        //x.setVisible(true);
         
-        //Home y=new Home();
-        //y.setVisible(true);
         
-        //pageStudent x=new pageStudent();
-        //x.setVisible(true);
-        
-        pageTeacher z=new pageTeacher();
-        z.setVisible(true);
+        Login log=new Login();
+        log.setVisible(true);
+       
     }
     
 }

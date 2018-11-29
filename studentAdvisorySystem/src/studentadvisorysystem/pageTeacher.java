@@ -126,6 +126,11 @@ public class pageTeacher extends javax.swing.JFrame {
         );
 
         item4.setBackground(new java.awt.Color(255, 255, 255));
+        item4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item4MouseClicked(evt);
+            }
+        });
 
         icon4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -165,6 +170,11 @@ public class pageTeacher extends javax.swing.JFrame {
         );
 
         item5.setBackground(new java.awt.Color(255, 255, 255));
+        item5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item5MouseClicked(evt);
+            }
+        });
 
         icon5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -204,6 +214,11 @@ public class pageTeacher extends javax.swing.JFrame {
         );
 
         item6.setBackground(new java.awt.Color(255, 255, 255));
+        item6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item6MouseClicked(evt);
+            }
+        });
 
         icon6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -260,6 +275,11 @@ public class pageTeacher extends javax.swing.JFrame {
         );
 
         item2.setBackground(new java.awt.Color(255, 255, 255));
+        item2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item2MouseClicked(evt);
+            }
+        });
 
         icon2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -299,6 +319,11 @@ public class pageTeacher extends javax.swing.JFrame {
         );
 
         item1.setBackground(new java.awt.Color(255, 255, 255));
+        item1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item1MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel4.setText("  Students");
@@ -343,7 +368,7 @@ public class pageTeacher extends javax.swing.JFrame {
             sideMenueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sideMenueLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(item2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(item1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -514,7 +539,7 @@ public class pageTeacher extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -588,6 +613,51 @@ public class pageTeacher extends javax.swing.JFrame {
     private void getId1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getId1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_getId1ActionPerformed
+
+    private void item4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item4MouseClicked
+        // TODO add your handling code here:
+        pageCourse cr=new pageCourse();
+        
+        this.setVisible(false);
+        
+        cr.setVisible(true);
+    }//GEN-LAST:event_item4MouseClicked
+
+    private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
+        // TODO add your handling code here:
+        pageDepartment dp=new pageDepartment();
+        
+        this.setVisible(false);
+        
+        dp.setVisible(true);
+    }//GEN-LAST:event_item5MouseClicked
+
+    private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
+        // TODO add your handling code here:
+        pageSection sec=new pageSection();
+        
+        this.setVisible(false);
+        
+        sec.setVisible(true);
+    }//GEN-LAST:event_item6MouseClicked
+
+    private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
+        // TODO add your handling code here:
+        pageStudent st=new pageStudent();
+        
+        this.setVisible(false);
+        
+        st.setVisible(true);
+    }//GEN-LAST:event_item2MouseClicked
+
+    private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
+        // TODO add your handling code here:
+        Home hm=new Home();
+        
+        this.setVisible(false);
+        
+        hm.setVisible(true);
+    }//GEN-LAST:event_item1MouseClicked
 
     /**
      * @param args the command line arguments

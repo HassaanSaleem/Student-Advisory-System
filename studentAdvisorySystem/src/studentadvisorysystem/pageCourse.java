@@ -82,6 +82,11 @@ public class pageCourse extends javax.swing.JFrame {
         sideMenue.setBackground(new java.awt.Color(0, 153, 255));
 
         item3.setBackground(new java.awt.Color(255, 255, 255));
+        item3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item3MouseClicked(evt);
+            }
+        });
 
         icon3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -162,6 +167,11 @@ public class pageCourse extends javax.swing.JFrame {
         );
 
         item5.setBackground(new java.awt.Color(255, 255, 255));
+        item5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item5MouseClicked(evt);
+            }
+        });
 
         icon5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -201,6 +211,11 @@ public class pageCourse extends javax.swing.JFrame {
         );
 
         item6.setBackground(new java.awt.Color(255, 255, 255));
+        item6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item6MouseClicked(evt);
+            }
+        });
 
         icon6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -257,6 +272,11 @@ public class pageCourse extends javax.swing.JFrame {
         );
 
         item2.setBackground(new java.awt.Color(255, 255, 255));
+        item2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item2MouseClicked(evt);
+            }
+        });
 
         icon2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -296,6 +316,11 @@ public class pageCourse extends javax.swing.JFrame {
         );
 
         item1.setBackground(new java.awt.Color(255, 255, 255));
+        item1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                item1MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel4.setText("  Students");
@@ -585,6 +610,52 @@ public class pageCourse extends javax.swing.JFrame {
     private void getId1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getId1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_getId1ActionPerformed
+
+    private void item3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item3MouseClicked
+        // TODO add your handling code here:
+        pageTeacher tr=new pageTeacher();
+        
+        this.setVisible(false);
+        
+        tr.setVisible(true);
+    }//GEN-LAST:event_item3MouseClicked
+
+    private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
+        // TODO add your handling code here:
+         pageDepartment dp=new pageDepartment();
+        
+        this.setVisible(false);
+        
+        dp.setVisible(true);
+       
+    }//GEN-LAST:event_item5MouseClicked
+
+    private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
+        // TODO add your handling code here:
+         pageSection sec=new pageSection();
+        
+        this.setVisible(false);
+        
+        sec.setVisible(true);
+    }//GEN-LAST:event_item6MouseClicked
+
+    private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
+        // TODO add your handling code here:
+         Home hm=new Home();
+        
+        this.setVisible(false);
+        
+        hm.setVisible(true);
+    }//GEN-LAST:event_item2MouseClicked
+
+    private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
+        // TODO add your handling code here:
+         pageStudent st=new pageStudent();
+        
+        this.setVisible(false);
+        
+        st.setVisible(true);
+    }//GEN-LAST:event_item1MouseClicked
 
     /**
      * @param args the command line arguments
