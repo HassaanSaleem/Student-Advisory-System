@@ -290,7 +290,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="icon5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel8" pref="133" max="32767" attributes="0"/>
+                          <Component id="jLabel8" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -469,7 +469,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="icon2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel5" max="32767" attributes="0"/>
+                          <Component id="jLabel5" min="-2" pref="133" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

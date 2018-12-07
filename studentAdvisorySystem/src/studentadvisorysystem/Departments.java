@@ -5,21 +5,40 @@
  */
 package studentadvisorysystem;
 
+import java.util.Vector;
+
 /**
  *
  * @author Hassaan
  */
 public class Departments {
     
-    private String name;
-    private String id;
+    private String deptName;
+    private String deptId;
+    private Vector<student> std;   //Agression
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDeptId(String deptId) {
+        this.deptId = deptId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
+    }
+
+    public void setStd(Vector<student> std) {
+        this.std = std;
+    }
+
+    public String getDeptId() {
+        return deptId;
+    }
+
+    public String getDeptName() {
+        return deptName;
+    }
+
+    public Vector<student> getStd() {
+        return std;
     }
     
 }

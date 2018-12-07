@@ -75,6 +75,8 @@ public class pageCourse extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setPreferredSize(new java.awt.Dimension(731, 540));
@@ -618,6 +620,7 @@ public class pageCourse extends javax.swing.JFrame {
         this.setVisible(false);
         
         tr.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item3MouseClicked
 
     private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
@@ -627,6 +630,7 @@ public class pageCourse extends javax.swing.JFrame {
         this.setVisible(false);
         
         dp.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
        
     }//GEN-LAST:event_item5MouseClicked
 
@@ -637,6 +641,7 @@ public class pageCourse extends javax.swing.JFrame {
         this.setVisible(false);
         
         sec.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item6MouseClicked
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
@@ -646,6 +651,7 @@ public class pageCourse extends javax.swing.JFrame {
         this.setVisible(false);
         
         hm.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item2MouseClicked
 
     private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
@@ -655,6 +661,7 @@ public class pageCourse extends javax.swing.JFrame {
         this.setVisible(false);
         
         st.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item1MouseClicked
 
     /**

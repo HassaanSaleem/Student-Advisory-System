@@ -208,7 +208,7 @@ public class pageStudent extends javax.swing.JFrame {
             .addGroup(item5Layout.createSequentialGroup()
                 .addComponent(icon5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         item5Layout.setVerticalGroup(
             item5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +323,7 @@ public class pageStudent extends javax.swing.JFrame {
             .addGroup(item2Layout.createSequentialGroup()
                 .addComponent(icon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         item2Layout.setVerticalGroup(
             item2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -632,13 +632,12 @@ public class pageStudent extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-       
-        Home hm=new Home();
+       Home hm=new Home();
         
         this.setVisible(false);
         
         hm.setVisible(true);
-        
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
@@ -648,6 +647,7 @@ public class pageStudent extends javax.swing.JFrame {
         this.setVisible(false);
         
         hm.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item2MouseClicked
 
     private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
@@ -657,6 +657,7 @@ public class pageStudent extends javax.swing.JFrame {
         this.setVisible(false);
         
         sec.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item6MouseClicked
 
     private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
@@ -666,7 +667,7 @@ public class pageStudent extends javax.swing.JFrame {
         this.setVisible(false);
         
         dep.setVisible(true);
-        
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item5MouseClicked
 
     private void item4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item4MouseClicked
@@ -676,6 +677,7 @@ public class pageStudent extends javax.swing.JFrame {
         this.setVisible(false);
         
         cr.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item4MouseClicked
 
     private void item3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item3MouseClicked
@@ -685,15 +687,11 @@ public class pageStudent extends javax.swing.JFrame {
         this.setVisible(false);
         
         tr.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item3MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         // TODO add your handling code here:
-        Home hm=new Home();
-
-        this.setVisible(false);
-
-        hm.setVisible(true);
     }//GEN-LAST:event_jLabel10MouseClicked
 
     /**

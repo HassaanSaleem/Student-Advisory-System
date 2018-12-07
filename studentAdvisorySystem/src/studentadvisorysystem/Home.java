@@ -451,7 +451,7 @@ public class Home extends javax.swing.JFrame {
         );
 
         jLabel17.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jLabel17.setText("<html><h1>About:</h1>Founded as a Federally Chartered University in July 2000, the National University of Computer and  Emerging Sciences is a premiere University of Pakistan, renowned for quality and impact of its  students in the development of local software and other industries. The university has five modern  campuses at Karachi, Lahore, Islamabad, Peshawar and Chiniot-Faisalabad. These campuses provide world  class educational environment and recreational facilities to about over 11,000 students, around one  quarter are female and over 500 skilled faculty members.  Research wings of the university are well recognized, nationally and internationally. They are  embarked upon cutting edge research having direct impact on the social, economic and technological needs of Pakistan. Our vision is to become a globally recognized research university of Pakistan within the next decade.</html>");
+        jLabel17.setText("<html><h1>About:</h1>Tokyo University  is a premiere University of Pakistan, renowned for quality and impact of its  students in the development of local software and other industries. The university has five modern  campuses at Karachi, Lahore, Islamabad, Peshawar and Chiniot-Faisalabad. These campuses provide world  class educational environment and recreational facilities to about over 11,000 students, around one  quarter are female and over 500 skilled faculty members.  Research wings of the university are well recognized, nationally and internationally. They are  embarked upon cutting edge research having direct impact on the social, economic and technological needs of Pakistan. Our vision is to become a globally recognized research university of Pakistan within the next decade.</html>");
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentadvisorysystem/fpo.jpg"))); // NOI18N
@@ -657,6 +657,7 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
         
         st.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item1MouseClicked
 
     private void item3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item3MouseClicked
@@ -666,6 +667,7 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
         
         te.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);        
     }//GEN-LAST:event_item3MouseClicked
 
     private void item4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item4MouseClicked
@@ -675,6 +677,7 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
         
         cr.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item4MouseClicked
 
     private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
@@ -684,6 +687,7 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
         
         dp.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item5MouseClicked
 
     private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
@@ -693,6 +697,7 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
         
         sec.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item6MouseClicked
 
     /**

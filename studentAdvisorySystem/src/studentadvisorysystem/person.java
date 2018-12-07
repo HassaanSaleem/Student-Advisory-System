@@ -41,6 +41,30 @@ public class person {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getCoNo() {
+        return CoNo;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public String getNIC() {
+        return NIC;
+    }
+
+    public String getName() {
+        return name;
+    }
     
        
 }

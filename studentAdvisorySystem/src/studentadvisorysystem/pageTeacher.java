@@ -621,6 +621,7 @@ public class pageTeacher extends javax.swing.JFrame {
         this.setVisible(false);
         
         cr.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item4MouseClicked
 
     private void item5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item5MouseClicked
@@ -630,6 +631,7 @@ public class pageTeacher extends javax.swing.JFrame {
         this.setVisible(false);
         
         dp.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item5MouseClicked
 
     private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
@@ -639,24 +641,27 @@ public class pageTeacher extends javax.swing.JFrame {
         this.setVisible(false);
         
         sec.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item6MouseClicked
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
         // TODO add your handling code here:
-        pageStudent st=new pageStudent();
+        Home st=new Home();
         
         this.setVisible(false);
         
         st.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item2MouseClicked
 
     private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
         // TODO add your handling code here:
-        Home hm=new Home();
+        pageStudent hm=new pageStudent();
         
         this.setVisible(false);
         
         hm.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item1MouseClicked
 
     /**

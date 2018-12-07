@@ -5,6 +5,8 @@
  */
 package studentadvisorysystem;
 
+import java.util.Vector;
+
 /**
  *
  * @author Hassaan
@@ -13,6 +15,8 @@ public class TokyoUniversity {
     private String name;
     private String location;
     private String HECregistrationNumber;
+    private Vector<Departments> dept;               //composed
+    private Vector<degProg> degree;  //composition 
 
     public void setHECregistrationNumber(String HECregistrationNumber) {
         this.HECregistrationNumber = HECregistrationNumber;
@@ -25,5 +29,18 @@ public class TokyoUniversity {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getHECregistrationNumber() {
+        return HECregistrationNumber;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
     
 }
