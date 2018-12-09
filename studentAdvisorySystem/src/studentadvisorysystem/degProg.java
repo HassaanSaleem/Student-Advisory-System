@@ -15,16 +15,13 @@ import java.util.Vector;
 public class degProg {
     
     private String dgName;
-    private int degid;
     private int duration;
-    private Vector<course> cr;
 
-    public void setDegid(int degid) {
-        this.degid = degid;
-    }
-
-    public void setCr(Vector<course> cr) {
-        this.cr = cr;
+    
+    degProg(String name)
+    {
+        this.dgName=name;
+        this.duration=4;
     }
 
     public void setDgName(String dgName) {
@@ -33,14 +30,6 @@ public class degProg {
 
     public void setDuration(int duration) {
         this.duration = duration;
-    }
-
-    public Vector<course> getCr() {
-        return cr;
-    }
-
-    public int getDegid() {
-        return degid;
     }
 
     public String getDgName() {

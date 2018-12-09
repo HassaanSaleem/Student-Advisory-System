@@ -21,10 +21,22 @@ public class Login extends javax.swing.JFrame {
      */
     
     protected String username;
+    protected int id;
     protected String password;
-    public Login() {
+    static teacher tr;
+    static student std;
+    
+    Login() {
         initComponents();
     }
+    
+    Login(int a,String b) 
+    {
+        initComponents();
+        this.id=a;
+        this.password=b;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -237,6 +249,21 @@ public class Login extends javax.swing.JFrame {
         passActionPerformed(evt);
         usnameActionPerformed(evt);
         
+        id = Integer.parseInt(username);
+            if(id>=503 && id<=645)
+            {
+                this.setVisible(false);
+                stdHome test=new stdHome();
+                test.setVisible(true);
+            }
+            else if(id>=1 && id<=30)
+            {
+                this.setVisible(false);
+                trhome test=new trhome();
+                test.setVisible(true);
+                
+            }
+         
         Dbhandler conn=new Dbhandler();
         
         boolean x;
@@ -251,8 +278,9 @@ public class Login extends javax.swing.JFrame {
             n1.setVisible(true);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+              Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked

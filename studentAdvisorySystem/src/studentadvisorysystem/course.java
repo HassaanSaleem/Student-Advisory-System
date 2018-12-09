@@ -11,10 +11,16 @@ package studentadvisorysystem;
  */
 public class course 
 {
-    int crId;
+    String crId;
     String crName;
+    
+    course(String id,String name)
+    {
+        this.crId=id;
+        this.crName=name;
+    }
 
-    public int getCrId() {
+    public String getCrId() {
         return crId;
     }
 
@@ -22,7 +28,7 @@ public class course
         return crName;
     }
 
-    public void setCrId(int crId) {
+    public void setCrId(String crId) {
         this.crId = crId;
     }
 

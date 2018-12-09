@@ -14,10 +14,21 @@ import java.util.Vector;
 public class Departments {
     
     private String deptName;
-    private String deptId;
-    private Vector<student> std;   //Agression
+    private int deptId;
+    protected Vector<student> std;
+    protected Vector<teacher> tr;
+    protected Vector<course> cr;
+    
+    Departments(int id,String name,Vector<student> std,Vector<teacher> tr,Vector<course> cr)
+    {
+        this.deptId=id;
+        this.deptName=name;
+        this.std=std;
+        this.tr=tr;
+        this.cr=cr;
+    }
 
-    public void setDeptId(String deptId) {
+    public void setDeptId(int deptId) {
         this.deptId = deptId;
     }
 
@@ -25,20 +36,12 @@ public class Departments {
         this.deptName = deptName;
     }
 
-    public void setStd(Vector<student> std) {
-        this.std = std;
-    }
-
-    public String getDeptId() {
+    public int getDeptId() {
         return deptId;
     }
 
     public String getDeptName() {
         return deptName;
-    }
-
-    public Vector<student> getStd() {
-        return std;
     }
     
 }
