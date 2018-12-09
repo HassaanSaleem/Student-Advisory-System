@@ -7,6 +7,7 @@ package studentadvisorysystem;
 
 import javafx.application.Platform;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,6 +18,9 @@ public class pageSection extends javax.swing.JFrame {
     /**
      * Creates new form pageSection
      */
+    
+    private String sec;
+    
     public pageSection() {
         initComponents();
     }
@@ -339,6 +343,11 @@ public class pageSection extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -382,11 +391,11 @@ public class pageSection extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Gender", "Age", "sgpa1", "sgpa2", "sgpa3", "name", "section"
+                "ID", "Gender", "Age", "name", "section"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -423,8 +432,8 @@ public class pageSection extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 123, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -477,6 +486,8 @@ public class pageSection extends javax.swing.JFrame {
 
     private void getId1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getId1ActionPerformed
         // TODO add your handling code here:
+       
+        sec=getId1.getText();
     }//GEN-LAST:event_getId1ActionPerformed
 
     private void item4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item4MouseClicked
@@ -491,12 +502,24 @@ public class pageSection extends javax.swing.JFrame {
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
         // TODO add your handling code here:
-        Home hm=new Home();
+          if(Login.logid>=503 && Login.logid<=645)
+        {
+            stdHome hm=new stdHome();
         
-        this.setVisible(false);
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
+        else
+        {
+            Home hm=new Home();
+        
+            this.setVisible(false);
         
         hm.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
     }//GEN-LAST:event_item2MouseClicked
 
     private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
@@ -508,6 +531,34 @@ public class pageSection extends javax.swing.JFrame {
         st.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                
+        getId1ActionPerformed(evt);
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        int x;
+        char b[]=sec.toCharArray();
+        for(x=0;x<145;x++)
+        {
+            char a[]=StudentAdvisorySystem.std.elementAt(x).getSec().toCharArray();
+            
+            if(a[0]==b[0])
+            {
+                Object rowdata[] = new Object[9];
+                rowdata[0]=StudentAdvisorySystem.std.elementAt(x).getStRedNo();
+                rowdata[1]=StudentAdvisorySystem.std.elementAt(x).getGender();
+                rowdata[2]=StudentAdvisorySystem.std.elementAt(x).getAge();
+                rowdata[3]=StudentAdvisorySystem.std.elementAt(x).getName();
+                rowdata[4]=StudentAdvisorySystem.std.elementAt(x).getSec();
+       
+                model.addRow(rowdata);
+        
+            }
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

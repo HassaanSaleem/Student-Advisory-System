@@ -7,6 +7,7 @@ package studentadvisorysystem;
 
 import javafx.application.Platform;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,8 +18,36 @@ public class pageCourse extends javax.swing.JFrame {
     /**
      * Creates new form pageCourse
      */
+    
+    String id;
     public pageCourse() {
         initComponents();
+         
+ 
+      DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        int x,y;
+        
+        for(x=0;x<145;x++)
+            if(StudentAdvisorySystem.std.elementAt(x).getStRedNo()==Login.logid)
+                break;
+        
+        if(StudentAdvisorySystem.std.elementAt(x).getsgpa3()<2.4)
+            y=5;        
+        else
+            y=10;
+        
+        for(x=0;x<y;x++)
+        {
+            
+                Object rowdata[] = new Object[2];
+                rowdata[0]=StudentAdvisorySystem.cr.elementAt(x).getCrId();
+                rowdata[1]=StudentAdvisorySystem.cr.elementAt(x).getCrName();
+                model.addRow(rowdata);
+        
+            
+        }
+         
     }
 
     /**
@@ -59,8 +88,10 @@ public class pageCourse extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        getId = new javax.swing.JTextField();
+        cr = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -353,10 +384,10 @@ public class pageCourse extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        getId.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        getId.addActionListener(new java.awt.event.ActionListener() {
+        cr.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        cr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                getIdActionPerformed(evt);
+                crActionPerformed(evt);
             }
         });
 
@@ -364,16 +395,39 @@ public class pageCourse extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(getId, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+            .addComponent(cr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(getId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(cr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "name"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -390,6 +444,10 @@ public class pageCourse extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addGap(27, 27, 27))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,7 +459,9 @@ public class pageCourse extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 260, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -455,10 +515,6 @@ public class pageCourse extends javax.swing.JFrame {
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void getIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_getIdActionPerformed
-
     private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
         // TODO add your handling code here:
          pageSection sec=new pageSection();
@@ -471,23 +527,60 @@ public class pageCourse extends javax.swing.JFrame {
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
         // TODO add your handling code here:
-         Home hm=new Home();
+        if(Login.logid>=503 && Login.logid<=645)
+        {
+            stdHome hm=new stdHome();
         
-        this.setVisible(false);
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
+        else
+        {
+            Home hm=new Home();
+        
+            this.setVisible(false);
         
         hm.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
     }//GEN-LAST:event_item2MouseClicked
 
     private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
         // TODO add your handling code here:
-         pageStudent st=new pageStudent();
-        
+        pageStudent st=new pageStudent();
         this.setVisible(false);
-        
         st.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        crActionPerformed(evt);
+        int x,y;
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        
+        for(x=0;x<10;x++)
+        {
+            if(StudentAdvisorySystem.cr.elementAt(x).getCrId()==id)
+            {
+                Object rowdata[] = new Object[2];
+                rowdata[0]=StudentAdvisorySystem.cr.elementAt(x).getCrId();
+                rowdata[1]=StudentAdvisorySystem.cr.elementAt(x).getCrName();
+                model.addRow(rowdata);
+        
+                break;
+            }
+        } 
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void crActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crActionPerformed
+        // TODO add your handling code here:
+        id=cr.getText().toString();
+    }//GEN-LAST:event_crActionPerformed
 
     /**
      * @param args the command line arguments
@@ -527,8 +620,8 @@ public class pageCourse extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Heading;
     private javax.swing.JPanel background;
+    private javax.swing.JTextField cr;
     private javax.swing.JPanel cross;
-    private javax.swing.JTextField getId;
     private javax.swing.JPanel icon2;
     private javax.swing.JPanel icon4;
     private javax.swing.JPanel icon6;
@@ -555,6 +648,8 @@ public class pageCourse extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel sideMenue;
     // End of variables declaration//GEN-END:variables
 }

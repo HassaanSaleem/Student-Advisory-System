@@ -74,9 +74,8 @@ public class StudentAdvisorySystem {
             while(rs4.next())                        //Students
             {
                 float sgpa4=rs4.getFloat("sgpa4");
-                predict[cx]=(float) (sgpa4+0.25);
+                predict[cx]=(float) (sgpa4+0.15);
                 cx++;
-                System.out.println(sgpa4);
             }
 
            

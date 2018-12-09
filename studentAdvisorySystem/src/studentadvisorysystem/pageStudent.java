@@ -408,6 +408,11 @@ public class pageStudent extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jButton2.setText("Send Meaasge");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -476,8 +481,8 @@ public class pageStudent extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(63, 63, 63)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pred, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -539,22 +544,47 @@ public class pageStudent extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-       Home hm=new Home();
+       
+        if(Login.logid>=503 && Login.logid<=645)
+        {
+            stdHome hm=new stdHome();
         
-        this.setVisible(false);
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
+        else
+        {
+            Home hm=new Home();
+        
+            this.setVisible(false);
         
         hm.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
         // TODO add your handling code here:
-        Home hm=new Home();
+          if(Login.logid>=503 && Login.logid<=645)
+        {
+            stdHome hm=new stdHome();
         
-        this.setVisible(false);
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
+        else
+        {
+            Home hm=new Home();
+        
+            this.setVisible(false);
         
         hm.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
     }//GEN-LAST:event_item2MouseClicked
 
     private void item6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item6MouseClicked
@@ -630,6 +660,14 @@ public class pageStudent extends javax.swing.JFrame {
        // TODO add your handling code here:
        
     }//GEN-LAST:event_predMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        ChatBox ch=new ChatBox();
+        ch.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

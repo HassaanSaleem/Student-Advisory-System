@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/StudentAdvisorySystem.java</file>
-            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/Departments.java</file>
-            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/TokyoUniversity.java</file>
-            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/student.java</file>
-            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/teacher.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/stdHome.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/Home.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/ChatBox.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/stpg.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/pageSection.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/pageCourse.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/pageStudent.java</file>
+            <file>file:/C:/Users/Hassaan/Desktop/Student-Advisory-System/studentAdvisorySystem/src/studentadvisorysystem/trhome.java</file>
         </group>
     </open-files>
 </project-private>

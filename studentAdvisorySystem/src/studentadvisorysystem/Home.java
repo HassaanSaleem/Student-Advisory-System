@@ -5,6 +5,9 @@
  */
 package studentadvisorysystem;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
 import javafx.application.Platform;
 import javax.swing.JFrame;
 
@@ -379,6 +382,11 @@ public class Home extends javax.swing.JFrame {
         );
 
         adop1.setBackground(new java.awt.Color(255, 255, 255));
+        adop1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                adop1MouseClicked(evt);
+            }
+        });
 
         jLabel20.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel20.setText("Train");
@@ -401,9 +409,14 @@ public class Home extends javax.swing.JFrame {
         );
 
         adop2.setBackground(new java.awt.Color(255, 255, 255));
+        adop2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                adop2MouseClicked(evt);
+            }
+        });
 
         jLabel22.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel22.setText("Attributes");
+        jLabel22.setText("K-mean");
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentadvisorysystem/icons8-course-32.png"))); // NOI18N
 
@@ -423,6 +436,11 @@ public class Home extends javax.swing.JFrame {
         );
 
         adop3.setBackground(new java.awt.Color(255, 255, 255));
+        adop3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                adop3MouseClicked(evt);
+            }
+        });
 
         jLabel24.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel24.setText("Parameters");
@@ -576,6 +594,45 @@ public class Home extends javax.swing.JFrame {
         sec.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_item6MouseClicked
+
+    private void adop1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adop1MouseClicked
+        // TODO add your handling code here:
+        if (Desktop.isDesktopSupported()) {
+        try {
+        File myFile = new File("C:\\Users\\Hassaan\\Desktop\\Student-Advisory-System\\studentAdvisorySystem\\ML part 1\\predict3.m");
+        Desktop.getDesktop().open(myFile);
+        } catch (IOException ex) {
+        // no application registered for PDFs
+        }
+}
+        
+        
+    }//GEN-LAST:event_adop1MouseClicked
+
+    private void adop2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adop2MouseClicked
+        // TODO add your handling code here:
+        if (Desktop.isDesktopSupported()) {
+        try {
+        File myFile = new File("C:\\Users\\Hassaan\\Desktop\\Student-Advisory-System\\studentAdvisorySystem\\ML part 1\\clustering.m");
+        Desktop.getDesktop().open(myFile);
+        } catch (IOException ex) {
+        // no application registered for PDFs
+        }
+        }        
+    }//GEN-LAST:event_adop2MouseClicked
+
+    private void adop3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adop3MouseClicked
+        // TODO add your handling code here:
+        if (Desktop.isDesktopSupported()) {
+        try {
+        File myFile = new File("C:\\Users\\Hassaan\\Desktop\\Student-Advisory-System\\studentAdvisorySystem\\ML part 1\\V3.csv");
+        Desktop.getDesktop().open(myFile);
+        } catch (IOException ex) {
+        // no application registered for PDFs
+        }
+        }       
+        
+    }//GEN-LAST:event_adop3MouseClicked
 
     /**
      * @param args the command line arguments

@@ -19,6 +19,7 @@ public class stdHome extends javax.swing.JFrame {
      */
     public stdHome() {
         initComponents();
+        
     }
 
     /**
@@ -226,6 +227,11 @@ public class stdHome extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("  Students");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentadvisorysystem/icons8-student-male-32.png"))); // NOI18N
@@ -237,8 +243,7 @@ public class stdHome extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, item1Layout.createSequentialGroup()
                 .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         item1Layout.setVerticalGroup(
             item1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,6 +417,7 @@ public class stdHome extends javax.swing.JFrame {
 
         sec.setVisible(true);
         this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        
     }//GEN-LAST:event_item6MouseClicked
 
     private void item2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item2MouseClicked
@@ -420,7 +426,7 @@ public class stdHome extends javax.swing.JFrame {
 
     private void item1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_item1MouseClicked
         // TODO add your handling code here:
-        pageStudent st=new pageStudent();
+        stpg st=new stpg();
 
         this.setVisible(false);
 
@@ -439,6 +445,17 @@ public class stdHome extends javax.swing.JFrame {
 
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        
+        stpg st=new stpg();
+
+        this.setVisible(false);
+
+        st.setVisible(true);
+        this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -470,6 +487,7 @@ public class stdHome extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new stdHome().setVisible(true);
             }
         });

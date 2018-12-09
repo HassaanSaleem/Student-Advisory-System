@@ -19,7 +19,7 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    
+    static int logid;
     protected String username;
     protected int id;
     protected String password;
@@ -28,6 +28,7 @@ public class Login extends javax.swing.JFrame {
     
     Login() {
         initComponents();
+        logid=0;
     }
     
     Login(int a,String b) 
@@ -249,27 +250,7 @@ public class Login extends javax.swing.JFrame {
         passActionPerformed(evt);
         usnameActionPerformed(evt);
          
-        int tr=0;
-           
-            id = Integer.parseInt(username);
-            if(id>=503 && id<=645)
-            {
-                this.setVisible(false);
-                stdHome test=new stdHome();
-                test.setVisible(true);
-                tr=1;
-            }
-            else if(id>=1 && id<=30)
-            {
-                this.setVisible(false);
-                trhome test=new trhome();
-                test.setVisible(true);
-                tr=1;
-            }
-        
-        
-        if(tr==0)
-        {
+            logst();
              Dbhandler conn=new Dbhandler();
              boolean x;
             try 
@@ -288,12 +269,33 @@ public class Login extends javax.swing.JFrame {
             {
                     Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
         
         
-       
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public void logst()
+    {
+        
+            id = Integer.parseInt(username);
+            if(id>=503 && id<=645)
+            {
+                logid=id;
+                this.setVisible(false);
+                stdHome test=new stdHome();
+                test.setVisible(true);
+            }
+            else if(id>=1 && id<=30)
+            {
+                logid=id;
+                this.setVisible(false);
+                trhome test=new trhome();
+                test.setVisible(true);
+                
+            }
+        
+       
+    }
+    
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
         Platform.exit();

@@ -220,5 +220,3 @@ public class ChatBox extends javax.swing.JFrame {
 
     }
 }
-
-
