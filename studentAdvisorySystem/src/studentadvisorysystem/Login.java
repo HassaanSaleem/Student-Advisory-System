@@ -248,39 +248,50 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         passActionPerformed(evt);
         usnameActionPerformed(evt);
-        
-        id = Integer.parseInt(username);
+         
+        int tr=0;
+           
+            id = Integer.parseInt(username);
             if(id>=503 && id<=645)
             {
                 this.setVisible(false);
                 stdHome test=new stdHome();
                 test.setVisible(true);
+                tr=1;
             }
             else if(id>=1 && id<=30)
             {
                 this.setVisible(false);
                 trhome test=new trhome();
                 test.setVisible(true);
-                
+                tr=1;
             }
-         
-        Dbhandler conn=new Dbhandler();
         
-        boolean x;
-        try {
-            x = conn.getdata(username,password);
-            System.out.println(x);
-            if(x==true)
+        
+        if(tr==0)
+        {
+             Dbhandler conn=new Dbhandler();
+             boolean x;
+            try 
             {
-            this.setVisible(false);
-            Home n1=new Home();
+                x = conn.getdata(username,password);
+                System.out.println(x);
+                if(x==true)
+                {
+                    this.setVisible(false);
+                    Home n1=new Home();
             
-            n1.setVisible(true);
+                    n1.setVisible(true);
+                }
+                } 
+            catch (SQLException ex) 
+            {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (SQLException ex) {
-              Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-         
+        
+        
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked

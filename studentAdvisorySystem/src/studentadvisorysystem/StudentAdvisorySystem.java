@@ -23,6 +23,7 @@ public class StudentAdvisorySystem {
     static Vector<teacher> tr=new Vector();
     static Vector<course> cr=new Vector();
     static TokyoUniversity uni;
+    static float [] predict=new float[200];
        
     /**
      * @param args the command line arguments
@@ -32,7 +33,7 @@ public class StudentAdvisorySystem {
         
         Connection con;
         Statement st=null; 
-        ResultSet rs,rs2,rs3;
+        ResultSet rs,rs2,rs3,rs4;
             try
             {
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -45,10 +46,12 @@ public class StudentAdvisorySystem {
                 System.out.println("error :"+ ex);
             }
         
-            String query,query2,query3;    
+            String query,query2,query3,query4;    
             query = "SELECT * FROM AdvisorySystem.Stdata";
             query2 = "SELECT * FROM AdvisorySystem.teacher";
             query3 = "SELECT * FROM AdvisorySystem.course";
+            query4 = "SELECT * FROM AdvisorySystem.predict";
+            
             rs=st.executeQuery(query);
             while(rs.next())                        //Students
             {
@@ -65,6 +68,17 @@ public class StudentAdvisorySystem {
                 
                 std.add(new student(id,section,name,sex,age,sgpa1,sgpa2,sgpa3));
             }
+            
+            int cx=0;
+            rs4=st.executeQuery(query4);
+            while(rs4.next())                        //Students
+            {
+                float sgpa4=rs4.getFloat("sgpa4");
+                predict[cx]=(float) (sgpa4+0.25);
+                cx++;
+                System.out.println(sgpa4);
+            }
+
            
             int count=1;
             rs2=st.executeQuery(query2);
@@ -100,25 +114,24 @@ public class StudentAdvisorySystem {
                 if(std.elementAt(x).getSec()=="A")
                     for(int y=0;y<5;y++)
                         tr.elementAt(x).AssignStudent(new student(std.elementAt(y).getStRedNo(),std.elementAt(y).getSec(),std.elementAt(y).getName(),
-                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa3(),std.elementAt(y).getsgpa1())
+                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa2(),std.elementAt(y).getsgpa3())
                         );
                 
                 if(std.elementAt(x).getSec()=="B")
                     for(int y=5;y<10;y++)
                         tr.elementAt(x).AssignStudent(new student(std.elementAt(y).getStRedNo(),std.elementAt(y).getSec(),std.elementAt(y).getName(),
-                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa3(),std.elementAt(y).getsgpa1())
-                        );
+                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa2(),std.elementAt(y).getsgpa3()));
                 
                 if(std.elementAt(x).getSec()=="C")
                     for(int y=10;y<15;y++)
                         tr.elementAt(x).AssignStudent(new student(std.elementAt(y).getStRedNo(),std.elementAt(y).getSec(),std.elementAt(y).getName(),
-                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa3(),std.elementAt(y).getsgpa1())
+                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa2(),std.elementAt(y).getsgpa3())
                         );
                 
                 if(std.elementAt(x).getSec()=="D")
                     for(int y=15;y<20;y++)
                         tr.elementAt(x).AssignStudent(new student(std.elementAt(y).getStRedNo(),std.elementAt(y).getSec(),std.elementAt(y).getName(),
-                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa3(),std.elementAt(y).getsgpa1())
+                        std.elementAt(y).getGender(),std.elementAt(y).getAge(),std.elementAt(y).getsgpa1(),std.elementAt(y).getsgpa2(),std.elementAt(y).getsgpa3())
                         );
             }
             

@@ -104,4 +104,9 @@ public class student
     {
         return sgpa[2];
     }
+    
+    public float getsgpa4()
+    {
+        return sgpa[3];
+    }
 }
