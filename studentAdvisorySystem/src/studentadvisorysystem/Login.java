@@ -250,7 +250,7 @@ public class Login extends javax.swing.JFrame {
         passActionPerformed(evt);
         usnameActionPerformed(evt);
          
-            logst();
+           // logst();
              Dbhandler conn=new Dbhandler();
              boolean x;
             try 
