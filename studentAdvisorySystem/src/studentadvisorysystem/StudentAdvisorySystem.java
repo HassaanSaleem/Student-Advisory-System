@@ -24,13 +24,14 @@ public class StudentAdvisorySystem {
     static Vector<course> cr=new Vector();
     static TokyoUniversity uni;
     static float [] predict=new float[200];
+    static Admin ad;
        
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException 
     {
-        
+               
         Connection con;
         Statement st=null; 
         ResultSet rs,rs2,rs3,rs4;
@@ -144,7 +145,7 @@ public class StudentAdvisorySystem {
                 for(int y=0;y<10;y++)
                     tr.elementAt(y).Assigncourse(new course(cr.elementAt(y).crId,cr.elementAt(y).crName));
             
-       
+            Departments.ad=ad;
             Login user=new Login();
             user.setVisible(true);
             

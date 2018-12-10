@@ -554,6 +554,16 @@ public class pageStudent extends javax.swing.JFrame {
               hm.setVisible(true);
               this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         }
+        else if(Login.logid>=1 && Login.logid<=30)
+        {
+            
+            trhome hm=new trhome();
+        
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
         else
         {
             Home hm=new Home();
@@ -570,6 +580,16 @@ public class pageStudent extends javax.swing.JFrame {
           if(Login.logid>=503 && Login.logid<=645)
         {
             stdHome hm=new stdHome();
+        
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
+          else if(Login.logid>=1 && Login.logid<=30)
+        {
+            
+            trhome hm=new trhome();
         
             this.setVisible(false);
         
@@ -663,8 +683,8 @@ public class pageStudent extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        ChatBox ch=new ChatBox();
-        ch.setVisible(true);
+        ChatBox mainGUI = new ChatBox();
+        mainGUI.preDisplay();
         
         
     }//GEN-LAST:event_jButton2ActionPerformed

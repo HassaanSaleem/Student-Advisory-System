@@ -18,7 +18,8 @@ public class Departments {
     protected Vector<student> std;
     protected Vector<teacher> tr;
     protected Vector<course> cr;
-    
+    protected static Admin ad;
+            
     Departments(int id,String name,Vector<student> std,Vector<teacher> tr,Vector<course> cr)
     {
         this.deptId=id;
@@ -26,6 +27,7 @@ public class Departments {
         this.std=std;
         this.tr=tr;
         this.cr=cr;
+        this.ad=ad;
     }
 
     public void setDeptId(int deptId) {

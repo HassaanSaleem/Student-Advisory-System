@@ -120,7 +120,7 @@ public class ChatBox extends javax.swing.JFrame {
         newFrame.setVisible(false);
         preFrame = new JFrame(appName);
         usernameChooser = new JTextField(15);
-        JLabel chooseUsernameLabel = new JLabel("Pick a username:");
+        JLabel chooseUsernameLabel = new JLabel("Enter Stdent ID::");
         JButton enterServer = new JButton("Enter Chat Server");
         enterServer.addActionListener(new enterServerButtonListener());
         JPanel prePanel = new JPanel(new GridBagLayout());

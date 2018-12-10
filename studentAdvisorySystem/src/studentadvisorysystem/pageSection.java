@@ -511,6 +511,16 @@ public class pageSection extends javax.swing.JFrame {
               hm.setVisible(true);
               this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
         }
+          else if(Login.logid>=1 && Login.logid<=30)
+        {
+            
+            trhome hm=new trhome();
+        
+            this.setVisible(false);
+        
+              hm.setVisible(true);
+              this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
+        }
         else
         {
             Home hm=new Home();
