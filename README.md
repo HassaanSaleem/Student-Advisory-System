@@ -11,7 +11,7 @@ Import .sql file into mysql DataBase
 Octane GUN must be installed to Run Linear Regression and K-Mean Algorithm
 NeatBeans ide and Java JDK must be installed to inport and run project
 
-UserName: hassaanAttribute Information:
+UserName: hassaan
 Password: 1234
 
 # Attributes for both K-mean and Regression: 
